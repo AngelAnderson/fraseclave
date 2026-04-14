@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FraseClave.com — Generador de Ideas de Palabras Clave en Español (Gratis)</title>
+  <meta name="description" content="Genera ideas de palabras clave en español para tu negocio. Gratis. Sin registro. Diseñado para negocios hispanos que quieren aparecer en Google.">
+  <meta property="og:title" content="FraseClave.com — Palabras Clave en Español, Gratis">
+  <meta property="og:description" content="Escribe tu negocio o servicio, recibe 20+ ideas de frases clave en español para posicionarte en Google. Sin registro.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://fraseclave.com/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "FraseClave.com",
+    "description": "Generador gratuito de ideas de palabras clave en español para SEO",
+    "applicationCategory": "SEO Tool",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "inLanguage": "es",
+    "author": { "@type": "Person", "name": "Angel Anderson" }
+  }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #e6edf3; line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+    .hero { text-align: center; padding: 50px 0 30px; }
+    .hero h1 { font-size: 2.5em; font-weight: 900; }
+    .hero h1 span { color: #58a6ff; }
+    .hero .sub { color: #8b949e; font-size: 1.1em; margin: 8px 0 0; }
+    .search-box { margin: 30px 0; display: flex; gap: 10px; }
+    .search-box input { flex: 1; padding: 16px 20px; font-size: 1.1em; border: 2px solid #30363d; border-radius: 10px; background: #161b22; color: #e6edf3; outline: none; }
+    .search-box input:focus { border-color: #58a6ff; }
+    .search-box button { padding: 16px 30px; background: #238636; color: white; border: none; border-radius: 10px; font-size: 1.1em; font-weight: bold; cursor: pointer; }
+    .search-box button:hover { background: #2ea043; }
+    .location-row { display: flex; gap: 10px; margin-bottom: 20px; }
+    .location-row select { padding: 10px 15px; background: #161b22; color: #8b949e; border: 1px solid #30363d; border-radius: 8px; font-size: 0.95em; }
+    #results { margin-top: 20px; }
+    .result-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+    .result-header h2 { font-size: 1.3em; }
+    .result-count { color: #8b949e; font-size: 0.9em; }
+    .keyword-group { margin-bottom: 25px; }
+    .keyword-group h3 { color: #58a6ff; font-size: 0.95em; margin-bottom: 8px; padding-bottom: 5px; border-bottom: 1px solid #21262d; }
+    .keyword-list { list-style: none; }
+    .keyword-list li { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; border-radius: 6px; margin-bottom: 2px; cursor: pointer; }
+    .keyword-list li:hover { background: #161b22; }
+    .keyword-list li .kw { color: #e6edf3; }
+    .keyword-list li .intent { font-size: 0.75em; padding: 2px 8px; border-radius: 10px; }
+    .intent-info { background: #1f6feb33; color: #58a6ff; }
+    .intent-buy { background: #23863633; color: #3fb950; }
+    .intent-local { background: #da3633aa; color: #ff7b72; }
+    .intent-compare { background: #9e6a03aa; color: #d29922; }
+    .copy-btn { background: #30363d; color: #8b949e; border: none; padding: 3px 10px; border-radius: 4px; font-size: 0.8em; cursor: pointer; }
+    .copy-btn:hover { background: #484f58; color: #e6edf3; }
+    .tips { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 25px; margin: 30px 0; }
+    .tips h3 { color: #58a6ff; margin-bottom: 10px; }
+    .tips p { color: #8b949e; font-size: 0.95em; margin-bottom: 8px; }
+    section { padding: 40px 0; border-top: 1px solid #21262d; }
+    h2 { font-size: 1.5em; margin-bottom: 15px; }
+    p { margin-bottom: 12px; color: #8b949e; }
+    .bold { color: #e6edf3; font-weight: bold; }
+    .cta-section { text-align: center; padding: 40px 0; }
+    .cta-btn { display: inline-block; background: #238636; color: white; padding: 14px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1em; }
+    .cta-sms { display: inline-block; border: 2px solid #58a6ff; color: #58a6ff; padding: 10px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; margin: 10px; }
+    footer { text-align: center; padding: 30px 0; color: #484f58; font-size: 0.85em; border-top: 1px solid #21262d; }
+    footer a { color: #58a6ff; text-decoration: none; }
+    .hidden { display: none; }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.8em; }
+      .search-box { flex-direction: column; }
+      .location-row { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <h1>Frase<span>Clave</span>.com</h1>
+      <p class="sub">Genera ideas de palabras clave en español para tu negocio. Gratis.</p>
+    </div>
+    <div class="search-box">
+      <input type="text" id="keyword" placeholder="Escribe tu negocio o servicio (ej: restaurante, plomero, dentista...)" autofocus>
+      <button id="generateBtn">Generar</button>
+    </div>
+    <div class="location-row">
+      <select id="country">
+        <option value="PR">Puerto Rico</option>
+        <option value="MX">México</option>
+        <option value="CO">Colombia</option>
+        <option value="ES">España</option>
+        <option value="AR">Argentina</option>
+        <option value="CL">Chile</option>
+        <option value="PE">Perú</option>
+        <option value="DO">Rep. Dominicana</option>
+        <option value="US">EE.UU. (Hispanos)</option>
+      </select>
+      <select id="city">
+        <option value="">Ciudad (opcional)</option>
+        <option value="Cabo Rojo">Cabo Rojo</option>
+        <option value="San Juan">San Juan</option>
+        <option value="Ponce">Ponce</option>
+        <option value="Mayagüez">Mayagüez</option>
+        <option value="custom">Otra ciudad...</option>
+      </select>
+    </div>
+    <div id="results" class="hidden"></div>
+    <div class="tips" id="initial-tips">
+      <h3>Cómo funciona:</h3>
+      <p>1. Escribe tu negocio, producto o servicio.</p>
+      <p>2. Selecciona tu país y ciudad.</p>
+      <p>3. Recibe 20+ ideas de frases clave organizadas por intención: informativa, de compra, local, y comparación.</p>
+      <p>4. Copia las que te sirvan y úsalas en tu Google My Business, tu página web, y tus publicaciones de Facebook.</p>
+      <p style="margin-top: 15px; color: #58a6ff; font-weight: bold;">Dato: El 72% de las personas que buscan "tienda de ropa de hombre en Cabo Rojo" NO encuentran resultado. Si esas frases están en tu perfil, Google te muestra primero.</p>
+    </div>
+    <section>
+      <h2>Por qué necesitas frases clave en español:</h2>
+      <p><span class="bold">Google no adivina.</span> Si tu página dice "vendemos comida" y la gente busca "almuerzo rápido cerca de mí", no te van a encontrar.</p>
+      <p><span class="bold">Las herramientas en inglés no sirven</span> para negocios hispanos. "Plumber near me" no es lo mismo que "plomero que no me robe en Cabo Rojo."</p>
+      <p><span class="bold">Cada frase clave es un cliente.</span> En Cabo Rojo, 374 personas buscaron "electricista" el mes pasado. Si esa frase no está en tu perfil, perdiste 374 clientes.</p>
+    </section>
+    <div class="cta-section">
+      <h2>Quieres que tu negocio aparezca primero?</h2>
+      <p style="max-width: 500px; margin: 0 auto 20px;">FraseClave te da las palabras. <span class="bold">CaboRojo.com</span> te da la plataforma. 3,924 negocios ya están ahí.</p>
+      <a href="https://publicamidevende.com" class="cta-btn">Aprende a vender con PMV — $9.99</a>
+      <br>
+      <a href="sms:7874177711?body=SEO" class="cta-sms">Textea SEO al 787-417-7711</a>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2026 Angel Anderson &middot; <a href="https://publicamidevende.com">PublicaMiDeVende.com</a> &middot; <a href="https://caborojo.com">CaboRojo.com</a></p>
+    <p style="margin-top: 5px;">Herramienta gratuita. Los datos son estimados para ayudarte a empezar.</p>
+  </footer>
+  <script>
+    const patterns = {
+      informational: [
+        "qué es {kw}", "cómo funciona {kw}", "para qué sirve {kw}",
+        "tipos de {kw}", "beneficios de {kw}", "diferencia entre {kw} y",
+        "{kw} significado", "guía de {kw}", "tutorial {kw}"
+      ],
+      transactional: [
+        "{kw} precio", "{kw} barato", "comprar {kw}", "mejor {kw}",
+        "{kw} ofertas", "{kw} descuento", "contratar {kw}",
+        "cuánto cuesta {kw}", "{kw} presupuesto", "{kw} gratis"
+      ],
+      local: [
+        "{kw} en {city}", "{kw} cerca de mí", "{kw} {city}",
+        "mejor {kw} en {city}", "{kw} abierto ahora", "dónde hay {kw} en {city}",
+        "{kw} a domicilio {city}", "teléfono {kw} {city}", "horario {kw} {city}"
+      ],
+      comparison: [
+        "mejor {kw} {city}", "{kw} recomendado", "{kw} opiniones",
+        "{kw} vs", "top {kw} en {city}", "{kw} más popular",
+        "{kw} reseñas", "cuál es el mejor {kw}"
+      ]
+    };
+
+    const intentConfig = {
+      informational: { label: "Info", cssClass: "intent-info" },
+      transactional: { label: "Compra", cssClass: "intent-buy" },
+      local: { label: "Local", cssClass: "intent-local" },
+      comparison: { label: "Comparar", cssClass: "intent-compare" }
+    };
+
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.textContent;
+    }
+
+    function generateKeywords() {
+      const kw = escapeHtml(document.getElementById('keyword').value.trim().toLowerCase());
+      if (!kw) return;
+
+      const citySelect = document.getElementById('city');
+      let city = citySelect.value;
+      if (city === 'custom') {
+        city = prompt('Escribe tu ciudad:') || '';
+      }
+      city = escapeHtml(city || 'tu ciudad');
+
+      const resultsDiv = document.getElementById('results');
+      resultsDiv.classList.remove('hidden');
+      document.getElementById('initial-tips').classList.add('hidden');
+
+      // Clear previous results safely
+      while (resultsDiv.firstChild) resultsDiv.removeChild(resultsDiv.firstChild);
+
+      // Header
+      const header = document.createElement('div');
+      header.className = 'result-header';
+      const h2 = document.createElement('h2');
+      h2.textContent = 'Ideas para: "' + kw + '"';
+      header.appendChild(h2);
+
+      let totalCount = 0;
+
+      // Build groups
+      const fragment = document.createDocumentFragment();
+      fragment.appendChild(header);
+
+      for (const [intent, pats] of Object.entries(patterns)) {
+        const config = intentConfig[intent];
+        const group = document.createElement('div');
+        group.className = 'keyword-group';
+        const groupTitle = document.createElement('h3');
+        groupTitle.textContent = config.label.toUpperCase();
+        group.appendChild(groupTitle);
+
+        const ul = document.createElement('ul');
+        ul.className = 'keyword-list';
+
+        for (const pat of pats) {
+          const phrase = pat.replace(/{kw}/g, kw).replace(/{city}/g, city);
+          totalCount++;
+
+          const li = document.createElement('li');
+          const kwSpan = document.createElement('span');
+          kwSpan.className = 'kw';
+          kwSpan.textContent = phrase;
+
+          const rightSpan = document.createElement('span');
+          const intentBadge = document.createElement('span');
+          intentBadge.className = 'intent ' + config.cssClass;
+          intentBadge.textContent = config.label;
+
+          const copyBtn = document.createElement('button');
+          copyBtn.className = 'copy-btn';
+          copyBtn.textContent = 'Copiar';
+          copyBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            navigator.clipboard.writeText(phrase).then(function() {
+              copyBtn.textContent = 'Copiado!';
+              copyBtn.style.background = '#238636';
+              copyBtn.style.color = 'white';
+              setTimeout(function() {
+                copyBtn.textContent = 'Copiar';
+                copyBtn.style.background = '';
+                copyBtn.style.color = '';
+              }, 1500);
+            });
+          });
+
+          rightSpan.appendChild(intentBadge);
+          rightSpan.appendChild(document.createTextNode(' '));
+          rightSpan.appendChild(copyBtn);
+          li.appendChild(kwSpan);
+          li.appendChild(rightSpan);
+
+          li.addEventListener('click', function() {
+            navigator.clipboard.writeText(phrase);
+          });
+
+          ul.appendChild(li);
+        }
+
+        group.appendChild(ul);
+        fragment.appendChild(group);
+      }
+
+      // Count badge
+      const countSpan = document.createElement('span');
+      countSpan.className = 'result-count';
+      countSpan.textContent = totalCount + ' ideas';
+      header.appendChild(countSpan);
+
+      // Usage tips
+      const tips = document.createElement('div');
+      tips.className = 'tips';
+      const tipsTitle = document.createElement('h3');
+      tipsTitle.textContent = 'Cómo usar estas frases:';
+      tips.appendChild(tipsTitle);
+
+      const tipTexts = [
+        'Google My Business: Usa las frases LOCAL en tu descripción y posts.',
+        'Facebook: Usa las frases INFO como títulos de posts educativos.',
+        'Página web: Pon las frases COMPRA en tus páginas de producto/servicio.',
+        'El truco: La gente busca con PREGUNTAS, no con palabras sueltas. "Cuánto cuesta un plomero en Cabo Rojo" tiene más intención de compra que "plomero."'
+      ];
+      tipTexts.forEach(function(t) {
+        const p = document.createElement('p');
+        p.textContent = t;
+        tips.appendChild(p);
+      });
+      fragment.appendChild(tips);
+
+      resultsDiv.appendChild(fragment);
+    }
+
+    document.getElementById('generateBtn').addEventListener('click', generateKeywords);
+    document.getElementById('keyword').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') generateKeywords();
+    });
+  </script>
+</body>
+</html>
